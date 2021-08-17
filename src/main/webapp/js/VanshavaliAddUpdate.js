@@ -35,15 +35,6 @@ var Gender = null ;
 
 var resp;
 
-$("#selectmemberdropdown").change(function() {
-    // Pure JS
-    var selectedVal = this.value;
-    var selectedText = this.options[this.selectedIndex].text;
-
-    // jQuery
-    var selectedVal = $(this).find(':selected').val();
-    var selectedText = $(this).find(':selected').text();
-});
 
 
 function LoadMemberName()

@@ -359,6 +359,18 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    $("#selectmemberdropdown").change(function() {
+    // Pure JS
+    var selectedVal = this.value;
+    var selectedText = this.options[this.selectedIndex].text;
+
+    // jQuery
+    var selectedVal = $(this).find(':selected').val();
+    var selectedText = $(this).find(':selected').text();
+    });
+    </script>
 </body>
 
 </html>
