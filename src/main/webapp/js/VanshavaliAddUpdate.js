@@ -97,6 +97,7 @@ function LoadMotherName()
 {
     //  var select = document.getElementById("selectmemberdropdown");
     var select1 = jQuery('#MFnamedropdown');
+    var SelectedMember = jQuery("#MFnamedropdown").val();
     jQuery('#MFnamedropdown').empty();
     jQuery('<option>').val("Unknown").text("Unknown").appendTo(select1);
 
@@ -110,7 +111,7 @@ function LoadMotherName()
         jQuery('<option>').val(jsondata[i].Spouse+ " -" + jsondata[i].MemberName).text(jsondata[i].Spouse+ " -" + jsondata[i].MemberName).appendTo(select1);
     }
     }
-
+    jQuery("#MFnamedropdown").val(SelectedMember);
 }
 
 
@@ -119,6 +120,7 @@ function onUpdateLoadMotherName()
 {
     //  var select = document.getElementById("selectmemberdropdown");
     var select1 = jQuery('#uMFnamedropdown');
+    var SelectedMember = jQuery("#uMFnamedropdown").val();
     jQuery('#uMFnamedropdown').empty();
     jQuery('<option>').val("Unknown").text("Unknown").appendTo(select1);
 
@@ -132,6 +134,7 @@ function onUpdateLoadMotherName()
             jQuery('<option>').val(jsondata[i].Spouse+ " -" + jsondata[i].MemberName).text(jsondata[i].Spouse+ " -" + jsondata[i].MemberName).appendTo(select1);
         }
     }
+    jQuery("#uMFnamedropdown").val(SelectedMember);
 
 }
 
