@@ -41,6 +41,7 @@ function LoadMemberName()
 {
     //  var select = document.getElementById("selectmemberdropdown");
     var select1 = jQuery('#selectmemberdropdown');
+    var SelectedMember = jQuery("#selectmemberdropdown").val();
     jQuery('#selectmemberdropdown').empty();
     jQuery('<option>').val("Select Member").text("Select Member").appendTo(select1);
 
@@ -70,6 +71,7 @@ function LoadMemberName()
         jQuery('<option>').val(jsondata[i].MemberName + " -" + jsondata[i].MemberID).text(jsondata[i].MemberName + " -" + jsondata[i].MemberID ).appendTo(select1);
     }
 
+    jQuery("#selectmemberdropdown").val(SelectedMember) ;
 }
 
 
